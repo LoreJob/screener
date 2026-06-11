@@ -1,0 +1,22 @@
+name: Validate Skill Files
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Validate skill structure
+      run: ./scripts/validate.sh
+
+    - name: List sector modules
+      run: |
+        echo "Sector modules:"
+        ls cv-screener/references/ | grep -v -E '^(SCREENING_PROTOCOL|ATS_KEYWORDS)\.md$' | sed 's/^/  - /'
