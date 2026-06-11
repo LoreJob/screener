@@ -86,9 +86,7 @@ For global FMCG roles: has the candidate operated across multiple markets? Europ
 ## Retail/FMCG Output Additions
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-RETAIL/FMCG FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── RETAIL/FMCG FIT SIGNALS ────────────────────
 
 Supplier vs retailer side:    [Supplier / Retailer / Both / Mismatch]
 Tier-1 customer exposure:     [Named Tier-1 / Regional only / None]
@@ -96,5 +94,4 @@ Commercial data tools:        [Nielsen/IRI/Kantar present / Absent]
 JBP experience:               [Led / Participated / Absent]
 P&L ownership:                [Full / Customer P&L / None]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

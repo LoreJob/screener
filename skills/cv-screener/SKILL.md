@@ -105,12 +105,12 @@ If classification is genuinely ambiguous after applying these rules, choose the 
 Before loading the sector module, output exactly this:
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTOR IDENTIFIED: [SECTOR NAME IN CAPS]
-SECTOR MODULE:     [sector module file name]
-ROLE:              [job title from JD]
-COMPANY:           [company name if identifiable]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ SECTOR IDENTIFIED: [SECTOR NAME IN CAPS]
+ SECTOR MODULE:     [sector module file name]
+ ROLE:              [job title from JD]
+ COMPANY:           [company name if identifiable]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 Then proceed immediately to the evaluation. No transition text, no "now I will evaluate your CV", no commentary. The classification block and then the evaluation output.

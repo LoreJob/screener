@@ -37,7 +37,7 @@ for f in "$REFS/SCREENING_PROTOCOL.md" "$REFS/ATS_KEYWORDS.md"; do
   [ -f "$f" ] && pass "$f exists" || fail "missing $f"
 done
 
-for marker in "VERDICT" "ATS SCORE" "OVERALL CV SCORE" "SCORE BREAKDOWN"; do
+for marker in "VERDICT" "ATS SCORE" "OVERALL CV SCORE" "ATS KEYWORD SCAN" "SCORE BREAKDOWN"; do
   grep -q "$marker" "$REFS/SCREENING_PROTOCOL.md" && pass "protocol defines output marker: $marker" || fail "protocol missing output marker: $marker"
 done
 

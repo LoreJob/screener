@@ -85,9 +85,7 @@ The market is full of people claiming energy transition expertise as a buzzword.
 ## Energy Output Additions
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ENERGY FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── ENERGY FIT SIGNALS ─────────────────────────
 
 Sector match:               [O&G / Renewables / Utilities / Trading / Cross-sector / Mismatch]
 Discipline match:           [Upstream / Downstream / Development / Trading / Operations / etc.]
@@ -95,5 +93,4 @@ Company tier:               [IOC / NOC / Major Utility / IPP / Boutique / Non-se
 Project/deal completion:    [FID/COD achieved / In progress / None evident]
 Safety credentials:         [Present / Absent / N/A for role]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

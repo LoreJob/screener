@@ -97,12 +97,10 @@ Note: These are internal weighting adjustments. Still report all six components 
 
 ## Consulting Output Additions
 
-Add this section to the standard output after the ATS Analysis block:
+Add this section to the standard output after the ATS KEYWORD SCAN block, using the same light `──` header style:
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CONSULTING FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── CONSULTING FIT SIGNALS ─────────────────────
 
 Prestige of prior employers: [Strong / Acceptable / Weak / None]
 Structured thinking evidence: [Present / Absent]
@@ -110,7 +108,6 @@ Quantification quality:       [Strong / Partial / Absent]
 Practice area match:          [Aligned / Partial / Misaligned]
 Education benchmark:          [Meets / Below threshold / N/A for level]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ---

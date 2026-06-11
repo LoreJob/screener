@@ -91,9 +91,7 @@ Core: compliance program, code of conduct, regulatory compliance, audit, risk as
 ## HR & Legal Output Additions
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-HR / LEGAL FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── HR / LEGAL FIT SIGNALS ─────────────────────
 
 [HR roles]
 Strategic vs transactional HR:  [Strategic / Mixed / Transactional]
@@ -107,5 +105,4 @@ PQE years:                       [X years or unclear]
 Practice area match:             [Aligned / Adjacent / Mismatch]
 In-house vs private practice:    [Match / Mismatch / Mixed]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

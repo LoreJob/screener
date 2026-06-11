@@ -30,14 +30,22 @@ Extract from the JD:
 
 ### 1b. Keyword Match Against CV
 
-For each keyword category, count how many appear verbatim or in close synonym form in the CV.
+Check every extracted keyword against the CV and classify it into one of three states:
+
+| State | Symbol | Meaning | Credit |
+|---|---|---|---|
+| Exact | ✓ | Appears verbatim or as a trivial variant (plural, capitalization, EN/local spelling) | 1.0 |
+| Partial | ~ | Close synonym or equivalent tool/methodology (e.g., "Looker" for "Tableau", "stakeholder alignment" for "stakeholder management") | 0.5 |
+| Missing | ✗ | Not present in any recognizable form | 0.0 |
+
+Be conservative: when in doubt between partial and exact, mark partial; between partial and missing, mark missing. A real ATS does not give the benefit of the doubt.
 
 Calculate:
 ```
-ATS Score = (matched keywords / total extracted keywords) * 10
+ATS Score = ((exact + 0.5 × partial) / total extracted keywords) * 10
 ```
 
-Round to one decimal. Apply the following thresholds:
+Round to one decimal. The full keyword inventory — every keyword with its state, grouped by category — must appear in the output (see Step 5, ATS KEYWORD SCAN). Apply the following thresholds:
 
 | ATS Score | Meaning |
 |---|---|
@@ -148,53 +156,83 @@ Hard disqualifiers (automatic REJECTED regardless of score):
 
 ## Step 5 — Output Format
 
-Every skill must produce output in exactly this structure:
+Every skill must produce output in exactly this structure, inside a single code block so columns stay aligned. The heavy `━` banner is used **only** for the verdict; every other section opens with a light `──` header line. Keep all lines at 46 characters or less.
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-VERDICT: [ACCEPTED FOR INTERVIEW / REJECTED]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ VERDICT: [ACCEPTED FOR INTERVIEW / REJECTED]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-ATS SCORE:        [X.X / 10]
-OVERALL CV SCORE: [X.X / 10]
+ OVERALL CV SCORE   [X.X] / 10
+ ATS SCORE          [X.X] / 10
 
-SECTOR:  [sector name]
-ROLE:    [extracted from JD]
-COMPANY: [if identifiable from JD]
+ Sector     [sector name]
+ Role       [extracted from JD]
+ Company    [if identifiable from JD]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ASSESSMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── ASSESSMENT ─────────────────────────────────
 
-[2–4 sentences of direct, unfiltered assessment. No softening. No "however, you have strengths in...". State what the CV is and why it does or does not work for this role.]
+ [2–4 sentences of direct, unfiltered
+ assessment. No softening. No "however, you
+ have strengths in...". State what the CV is
+ and why it does or does not work for this
+ role.]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ATS ANALYSIS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── ATS KEYWORD SCAN ───────────────────────────
 
-Keywords present:   [list]
-Keywords missing:   [list — these are the ones that would get you filtered out]
-Formatting issues:  [list, or "None detected"]
+ Matched [N] of [M] keywords ([XX]%)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-REJECTION REASONS  [omit section if ACCEPTED]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ Hard skills ([n]/[m])
+   ✓ [keyword]      ✓ [keyword]
+   ~ [keyword]
+   ✗ [keyword]      ✗ [keyword]
 
-[Numbered list of specific, concrete rejection reasons. Each one must be tied to something observable in the CV or its comparison to the JD. No vague statements like "lacks leadership experience" — specify what was or wasn't there and why it matters for this role.]
+ Soft skills ([n]/[m])
+   ✓ [keyword]
+   ✗ [keyword]      ✗ [keyword]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SCORE BREAKDOWN
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ Experience & credentials ([n]/[m])
+   ✓ [keyword]
+   ✗ [keyword]
 
-ATS Keyword Match (25%):        [score]/10
-Experience Relevance (30%):     [score]/10
-Achievement Quality (20%):      [score]/10
-Formatting & Clarity (10%):     [score]/10
-Education & Credentials (10%):  [score]/10
-Career Trajectory (5%):         [score]/10
+ Role terminology ([n]/[m])
+   ✗ [keyword]      ✗ [keyword]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ✓ exact   ~ synonym (half credit)   ✗ missing
+
+ Formatting flags: [list, or "None detected"]
+
+── REJECTION REASONS ──────────────────────────
+   [omit this section entirely if ACCEPTED]
+
+ 1. [Numbered list of specific, concrete
+    rejection reasons. Each one tied to
+    something observable in the CV or its
+    comparison to the JD. No vague statements
+    like "lacks leadership experience" —
+    specify what was or wasn't there and why
+    it matters for this role.]
+
+── SCORE BREAKDOWN ────────────────────────────
+
+ Component                  Weight   Score
+ ATS Keyword Match            25%    [X.X]/10
+ Experience Relevance         30%    [X.X]/10
+ Achievement Quality          20%    [X.X]/10
+ Formatting & Clarity         10%    [X.X]/10
+ Education & Credentials      10%    [X.X]/10
+ Career Trajectory             5%    [X.X]/10
+───────────────────────────────────────────────
 ```
+
+Rules for the ATS KEYWORD SCAN section:
+
+- **Every extracted keyword appears exactly once**, under its category, with its match state. This section is the user's single most actionable piece of information — it shows precisely which words the ATS looks for, which ones the CV already has, and which ones are missing.
+- Within each category, list ✓ first, then ~, then ✗. Two keywords per line where they fit; one per line for long phrases.
+- Order ✗ keywords by importance: requirements the JD marks as mandatory come first.
+- If the JD yields more than ~30 keywords, keep every ✗ visible and compress the ✓ list ("✓ 12 more matched: ...") — missing keywords are never truncated.
+- The sector module's FIT SIGNALS section (if any) is inserted between ATS KEYWORD SCAN and REJECTION REASONS, using the same `──` header style.
+- The weight percentages in SCORE BREAKDOWN are the sector module's calibration adjustments when one is loaded, not necessarily the defaults shown here.
 
 ---
 

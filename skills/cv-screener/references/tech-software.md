@@ -96,12 +96,10 @@ For ML Research or Applied Scientist roles: are there publications? NeurIPS, ICM
 
 ## Tech Output Additions
 
-Add this section after ATS Analysis:
+Add this section to the standard output after the ATS KEYWORD SCAN block, using the same light `──` header style:
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TECH FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── TECH FIT SIGNALS ───────────────────────────
 
 Primary stack match:       [Full / Partial / Mismatch]
 Scale of systems:          [Enterprise / Mid-scale / Small / Unclear]
@@ -109,5 +107,4 @@ Company tier (background): [Tier-1 / Tier-2 / Enterprise / Consulting / Mixed]
 Portfolio/GitHub:          [Present / Absent / N/A for role]
 Research pedigree:         [Strong / Present / Absent / N/A for role]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

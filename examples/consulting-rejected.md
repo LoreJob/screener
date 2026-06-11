@@ -57,96 +57,124 @@ A complete screening run. All names and details are fictional.
 ## Output — What the Skill Produces
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTOR IDENTIFIED: STRATEGY CONSULTING
-SECTOR MODULE:     consulting.md
-ROLE:              Junior Consultant
-COMPANY:           Athena Strategy Partners
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ SECTOR IDENTIFIED: STRATEGY CONSULTING
+ SECTOR MODULE:     consulting.md
+ ROLE:              Junior Consultant
+ COMPANY:           Athena Strategy Partners
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-VERDICT: REJECTED
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ VERDICT: REJECTED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-ATS SCORE:        2.7 / 10
-OVERALL CV SCORE: 3.4 / 10
+ OVERALL CV SCORE   3.0 / 10
+ ATS SCORE          2.5 / 10
 
-SECTOR:  Strategy Consulting
-ROLE:    Junior Consultant
-COMPANY: Athena Strategy Partners
+ Sector     Strategy Consulting
+ Role       Junior Consultant
+ Company    Athena Strategy Partners
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ASSESSMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── ASSESSMENT ─────────────────────────────────
 
-This is a communications and event-management CV applying to an analytical
-strategy role. There is no overlap between what the JD asks for — market
-sizing, financial modeling, structured problem solving — and anything
-demonstrated in these four years of experience. The CV would be filtered
-out by the ATS and, if it reached a human, rejected within the first scan.
+ This is a communications and event-management
+ CV applying to an analytical strategy role.
+ There is no overlap between what the JD asks
+ for — market sizing, financial modeling,
+ structured problem solving — and anything
+ demonstrated in these four years of
+ experience. The CV would be filtered out by
+ the ATS and, if it reached a human, rejected
+ within the first scan.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ATS ANALYSIS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── ATS KEYWORD SCAN ───────────────────────────
 
-Keywords present:   problem solving, presentations, budgets, client
-Keywords missing:   market sizing, benchmarking, competitor analysis,
-                    financial modeling, business case, strategy,
-                    transformation, Excel (advanced), structured
-                    problem-solving, senior stakeholders
-Formatting issues:  None detected
+ Matched 3 of 18 keywords, 3 partially (25%)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CONSULTING FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ Hard skills (1/7)
+   ~ Excel            ~ PowerPoint
+   ✗ financial modeling
+   ✗ market sizing    ✗ benchmarking
+   ✗ competitor analysis
+   ✗ business case
 
-Prestige of prior employers:  None
-Structured thinking evidence: Absent
-Quantification quality:       Absent
-Practice area match:          Misaligned
-Education benchmark:          Below threshold
+ Soft skills (1.5/2)
+   ✓ communication
+   ~ structured problem-solving
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-REJECTION REASONS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ Experience & credentials (2/5)
+   ✓ Master's degree  ✓ Italian (native)
+   ✗ fluent English   ✗ top university
+   ✗ consulting / strategy experience
 
-1. Zero quantification. Eight bullet points across two roles and not a
-   single number — no budget size, no project value, no measurable
-   outcome. The consulting module treats this as a hard disqualifier:
-   a CV with no numbers signals someone who does not think
-   quantitatively.
+ Role terminology (0/4)
+   ✗ strategy         ✗ transformation
+   ✗ steering committee
+   ✗ senior stakeholders
 
-2. No analytical experience. The JD requires 1–3 years in consulting,
-   corporate strategy, or a highly analytical role. Event coordination
-   and account management at a communication agency meet none of these.
-   "Supporting the sales team in preparing proposals" is not financial
-   modeling.
+ ✓ exact   ~ synonym (half credit)   ✗ missing
 
-3. ATS keyword match of 2.7/10 is below the 4.0 floor. The CV would
-   never reach a human recruiter at this firm.
+ Formatting flags: None detected
 
-4. Education below the stated bar. The JD asks for Economics,
-   Engineering, or Business from a top university; the CV offers
-   Communication Sciences from a regional university with no compensating
-   professional track record.
+── CONSULTING FIT SIGNALS ─────────────────────
 
-5. English at B2 against a "fluent English" requirement in a firm
-   working across European engagements.
+ Prestige of prior employers:  None
+ Structured thinking evidence: Absent
+ Quantification quality:       Absent
+ Practice area match:          Misaligned
+ Education benchmark:          Below threshold
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SCORE BREAKDOWN
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── REJECTION REASONS ──────────────────────────
 
-ATS Keyword Match (20%):        2.7/10
-Experience Relevance (35%):     2.5/10
-Achievement Quality (25%):      2.0/10
-Formatting & Clarity (10%):     7.0/10
-Education & Credentials (8%):   3.5/10
-Career Trajectory (2%):         5.0/10
+ 1. Zero quantification. Eight bullet points
+    across two roles and not a single number —
+    no budget size, no project value, no
+    measurable outcome. The consulting module
+    treats this as a hard disqualifier: a CV
+    with no numbers signals someone who does
+    not think quantitatively.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 2. No analytical experience. The JD requires
+    1–3 years in consulting, corporate
+    strategy, or a highly analytical role.
+    Event coordination and account management
+    at a communication agency meet none of
+    these. "Supporting the sales team in
+    preparing proposals" is not financial
+    modeling.
+
+ 3. ATS keyword match of 2.5/10 is below the
+    4.0 floor. The CV would never reach a
+    human recruiter at this firm.
+
+ 4. Education below the stated bar. The JD
+    asks for Economics, Engineering, or
+    Business from a top university; the CV
+    offers Communication Sciences from a
+    regional university with no compensating
+    professional track record.
+
+ 5. English at B2 against a "fluent English"
+    requirement in a firm working across
+    European engagements.
+
+── SCORE BREAKDOWN ────────────────────────────
+
+ Component                  Weight   Score
+ ATS Keyword Match            20%    2.5/10
+ Experience Relevance         35%    2.5/10
+ Achievement Quality          25%    2.0/10
+ Formatting & Clarity         10%    7.0/10
+ Education & Credentials       8%    3.5/10
+ Career Trajectory             2%    5.0/10
+───────────────────────────────────────────────
 ```
 
-Note the weights in the breakdown: they are the consulting module's
-calibration adjustments, not the core protocol defaults — exactly as the
-module specifies.
+Two things to note:
+
+- The **ATS KEYWORD SCAN** lists every keyword extracted from the JD with
+  its match state — exact (✓), synonym at half credit (~), or missing (✗).
+  The score follows from the counts: (3 + 0.5 × 3) / 18 × 10 = 2.5.
+- The weights in the breakdown are the consulting module's calibration
+  adjustments, not the core protocol defaults — exactly as the module
+  specifies.

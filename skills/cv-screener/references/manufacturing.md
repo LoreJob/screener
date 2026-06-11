@@ -96,9 +96,7 @@ Operations roles involve production stoppages, quality escapes, supply disruptio
 ## Manufacturing Output Additions
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-OPERATIONS FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── OPERATIONS FIT SIGNALS ─────────────────────
 
 Max operation size managed: [headcount / revenue / volume if stated]
 P&L ownership:              [Full / Partial / None evident]
@@ -106,5 +104,4 @@ Lean/CI depth:              [Certified + projects / Certified only / Claimed / A
 Sector regulatory match:    [Full / Partial / Mismatch / N/A]
 ERP/systems coverage:       [Matches JD / Partial / Mismatch]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

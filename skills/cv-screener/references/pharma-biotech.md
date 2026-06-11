@@ -93,9 +93,7 @@ Sponsor-side and CRO-side experience create different skill profiles. CRO experi
 ## Pharma Output Additions
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PHARMA FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── PHARMA FIT SIGNALS ─────────────────────────
 
 GxP experience:              [Demonstrated / Claimed only / Absent]
 Regulatory market coverage:  [FDA / EMA / Both / Other / N/A]
@@ -103,5 +101,4 @@ Therapeutic area match:      [Aligned / Adjacent / Mismatch]
 Sponsor vs CRO background:   [Sponsor / CRO / Mixed / N/A]
 Scientific credentials:      [PhD / MSc / BSc / Non-scientific degree]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

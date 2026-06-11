@@ -70,26 +70,40 @@ Upload the `skills/cv-screener/` folder via the Skills API. See the [Agent Skill
 **Example output (abridged — full version in [examples/](examples/)):**
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTOR IDENTIFIED: STRATEGY CONSULTING
-SECTOR MODULE:     consulting.md
-ROLE:              Junior Consultant
-COMPANY:           Athena Strategy Partners
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-VERDICT: REJECTED
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ VERDICT: REJECTED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-ATS SCORE:        2.7 / 10
-OVERALL CV SCORE: 3.4 / 10
+ OVERALL CV SCORE   3.0 / 10
+ ATS SCORE          2.5 / 10
 
-REJECTION REASONS
-1. Zero quantification. Eight bullet points across two roles and not a
-   single number — the consulting module treats this as a hard
-   disqualifier.
-2. ATS keyword match below the 4.0 floor: "market sizing", "financial
-   modeling" and "benchmarking" required by the JD, none present.
-3. ...
+ Sector     Strategy Consulting
+ Role       Junior Consultant
+ Company    Athena Strategy Partners
+
+── ATS KEYWORD SCAN ───────────────────────────
+
+ Matched 3 of 18 keywords, 3 partially (25%)
+
+ Hard skills (1/7)
+   ~ Excel            ~ PowerPoint
+   ✗ financial modeling
+   ✗ market sizing    ✗ benchmarking
+   ...
+
+── REJECTION REASONS ──────────────────────────
+
+ 1. Zero quantification. Eight bullet points
+    across two roles and not a single number —
+    the consulting module treats this as a
+    hard disqualifier.
+ 2. ATS keyword match of 2.5/10 is below the
+    4.0 floor. The CV would never reach a
+    human recruiter at this firm.
+ 3. ...
 ```
+
+Every keyword the ATS looks for — taken from the job description — is listed with its state: ✓ present in your CV, ~ matched as a synonym, ✗ missing. You see exactly which words are filtering you out.
 
 ---
 

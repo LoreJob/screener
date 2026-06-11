@@ -95,9 +95,7 @@ Bulge bracket (Goldman, MS, JPM, Barclays, UBS, Deutsche, HSBC) > Elite boutique
 ## Finance Output Additions
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FINANCE FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── FINANCE FIT SIGNALS ────────────────────────
 
 Firm tier (background):    [Bulge Bracket / Elite Boutique / Mid-Market / Corporate / Unknown]
 Deal/transaction evidence: [Named transactions / Vague / Absent / N/A]
@@ -105,5 +103,4 @@ Quantification quality:    [Strong / Partial / Absent]
 Certification status:      [Required certs present / Missing / N/A]
 Education benchmark:       [Target / Non-target / Strong career compensates / Insufficient]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

@@ -91,9 +91,7 @@ For any role with "digital" in the title or as a core requirement: assess whethe
 ## Marketing Output Additions
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-MARKETING FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── MARKETING FIT SIGNALS ──────────────────────
 
 Marketing type match:     [Brand / Digital / Performance / Content / Product / B2B / Mismatch]
 Commercial outcomes:      [Strong (revenue/share/ROI) / Partial (mixed) / Absent (activity only)]
@@ -101,5 +99,4 @@ Budget managed:           [Stated / Implied / Absent]
 B2B vs B2C alignment:     [Match / Mismatch / Hybrid acceptable]
 Agency vs in-house:       [Match / Mismatch / Both acceptable]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

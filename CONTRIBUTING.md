@@ -73,16 +73,13 @@ This file defines **[sector]-specific criteria** on top of the core protocol.
 
 **Score calibration adjustments** — a table showing how to adjust the six scoring components from their default weights for this sector. All weights must still sum to 100%.
 
-**Sector output additions** — a code block showing the sector-specific signals section to append to the standard output. Keep it to 5–7 fields:
+**Sector output additions** — a code block showing the sector-specific signals section inserted after the ATS KEYWORD SCAN block of the standard output. Keep it to 5–7 fields and use the light `──` header style (one line, padded to 47 characters):
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[SECTOR] FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── [SECTOR] FIT SIGNALS ───────────────────────
 
 Signal label:  [Value 1 / Value 2 / Value 3]
 ...
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ### 2. Wire the module into the router

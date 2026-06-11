@@ -88,12 +88,10 @@ Note: These are internal weighting adjustments. Still report all six components 
 
 ## Sales & BD Output Additions
 
-Add this section to the standard output after the ATS Analysis block:
+Add this section to the standard output after the ATS KEYWORD SCAN block, using the same light `──` header style:
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SALES & BD FIT SIGNALS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+── SALES & BD FIT SIGNALS ─────────────────────
 
 Quota attainment evidence: [Quantified per year / Single claim / Absent]
 Revenue scope:             [Stated / Vague / Absent]
@@ -102,7 +100,6 @@ Hunting vs farming fit:    [Aligned / Partial / Misaligned]
 Process & CRM discipline:  [Present / Absent]
 Tenure pattern:            [Stable / Acceptable / Job-hopper]
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ---
