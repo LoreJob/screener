@@ -2,8 +2,11 @@
 
 [![Validate](https://github.com/LoreJob/screener/actions/workflows/validate.yml/badge.svg)](https://github.com/LoreJob/screener/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/LoreJob/screener)](https://github.com/LoreJob/screener/releases/latest)
 
 A Claude skill that acts as a **brutally honest, sector-specific recruiter**. No encouragement, no fluff — just the same cold, objective assessment a real recruiter would give your CV before deciding whether to call you.
+
+Works in **English, Italiano, Español, Français, Português, Русский, 中文** — the skill answers in your language.
 
 ---
 
@@ -21,70 +24,70 @@ This skill replicates that exact behavior:
 
 There is no "almost there." Either your CV is ready for the role or it isn't.
 
+See a complete run (job description + CV + full verdict) in [examples/](examples/).
+
 ---
 
 ## Installation
 
-The skill is a single self-contained folder: [cv-screener/](cv-screener/), containing the router ([SKILL.md](cv-screener/SKILL.md)) and the evaluation modules ([references/](cv-screener/references/)).
+### Claude.ai, Claude Desktop, or the mobile app — easiest
 
-### Claude Code
+1. Download **`cv-screener.zip`** from the [latest release](https://github.com/LoreJob/screener/releases/latest)
+2. Attach the zip in a chat with Claude and write: *"Add this skill to my skills"* — Claude installs it for you
+
+Alternatively, upload the zip manually under **Settings → Capabilities → Skills** (requires Pro, Max, Team, or Enterprise).
+
+### Claude Code — as a plugin
+
+```
+/plugin marketplace add LoreJob/screener
+/plugin install cv-screener@screener
+```
+
+### Claude Code — manual
 
 ```bash
 git clone https://github.com/LoreJob/screener.git
 mkdir -p ~/.claude/skills
-cp -r screener/cv-screener ~/.claude/skills/
+cp -r screener/skills/cv-screener ~/.claude/skills/
 ```
 
-To install it for a single project instead, copy it to `.claude/skills/` inside the project. Verify with `/skills` in Claude Code.
-
-### Claude.ai (Pro, Max, Team, Enterprise)
-
-1. Download this repository (**Code → Download ZIP**) and extract it
-2. Create a zip of the skill folder only:
-   ```bash
-   cd screener && zip -r cv-screener.zip cv-screener
-   ```
-3. On claude.ai go to **Settings → Capabilities**, enable **Skills**, and upload `cv-screener.zip`
+To install for a single project instead, copy it to `.claude/skills/` inside the project. Verify with `/skills`.
 
 ### Claude API / Agent SDK
 
-Upload the `cv-screener/` folder via the Skills API. See the [Agent Skills documentation](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) for details.
+Upload the `skills/cv-screener/` folder via the Skills API. See the [Agent Skills documentation](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) for details.
 
 ---
 
 ## How to Use
 
-1. Type **`screener`** in the chat (or just ask "is my CV good enough for this role?")
+1. Type **`screener`** in the chat (or just ask "is my CV good enough for this role?" — in any supported language)
 2. Upload or paste your **CV**
 3. Upload or paste the **full job description** — a job title alone is not accepted
 4. The skill identifies the sector from the JD, loads the matching evaluation module, and delivers the verdict
 
-**Example output (abridged):**
+**Example output (abridged — full version in [examples/](examples/)):**
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SECTOR IDENTIFIED: STRATEGY CONSULTING
 SECTOR MODULE:     consulting.md
 ROLE:              Junior Consultant
-COMPANY:           McKinsey & Company
+COMPANY:           Athena Strategy Partners
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 VERDICT: REJECTED
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-ATS SCORE:        4.8 / 10
-OVERALL CV SCORE: 5.1 / 10
-
-ASSESSMENT
-The CV describes three years of generalist project coordination with zero
-quantified outcomes. For MBB screening this reads as administrative
-experience, not consulting-adjacent work. It would not survive the first
-human pass.
+ATS SCORE:        2.7 / 10
+OVERALL CV SCORE: 3.4 / 10
 
 REJECTION REASONS
-1. No quantified impact anywhere in the CV — consulting recruiters treat
-   this as a proxy for non-analytical thinking.
-2. ATS keyword match below threshold: "financial modeling", "due diligence"
-   and "market sizing" required by the JD, none present.
+1. Zero quantification. Eight bullet points across two roles and not a
+   single number — the consulting module treats this as a hard
+   disqualifier.
+2. ATS keyword match below the 4.0 floor: "market sizing", "financial
+   modeling" and "benchmarking" required by the JD, none present.
 3. ...
 ```
 
@@ -97,6 +100,7 @@ REJECTION REASONS
 | `consulting` | Strategy & Management Consulting (MBB, Big 4, boutiques) |
 | `tech-software` | Software Engineering, Product, Data Science, AI/ML |
 | `finance-banking` | Investment Banking, Private Equity, Asset Management |
+| `sales-bd` | Sales, Business Development, Account Management, Partnerships |
 | `manufacturing` | Operations, Supply Chain, Industrial Engineering |
 | `marketing` | Brand, Digital, Growth, Communications |
 | `hr-legal` | Human Resources, Legal, Compliance |
@@ -106,7 +110,7 @@ REJECTION REASONS
 
 Roles outside these sectors are still screened using the core protocol alone, with a note that sector calibration was not applied.
 
-All modules share the evaluation framework in [SCREENING_PROTOCOL.md](cv-screener/references/SCREENING_PROTOCOL.md): same scoring methodology, same ATS logic, comparable verdicts — a 7/10 in consulting means the same rigor as a 7/10 in finance.
+All modules share the evaluation framework in [SCREENING_PROTOCOL.md](skills/cv-screener/references/SCREENING_PROTOCOL.md): same scoring methodology, same ATS logic, comparable verdicts — a 7/10 in consulting means the same rigor as a 7/10 in finance.
 
 ---
 
@@ -121,6 +125,14 @@ Its job is to tell you **whether your CV passes the bar** for a specific role an
 
 ---
 
+## Privacy
+
+Your CV never leaves your conversation with Claude. The skill is a set of instruction files — it has **no backend, no analytics, no storage**, and sends nothing to the authors or to any third party. Processing happens entirely inside your Claude chat, under [Anthropic's privacy policy](https://www.anthropic.com/legal/privacy).
+
+If you choose to [share an example](examples/README.md) with this repository, anonymize it first: no names, no contacts, no identifying details.
+
+---
+
 ## Honest Disclaimers
 
 In the spirit of the project, two things you should know:
@@ -132,7 +144,7 @@ In the spirit of the project, two things you should know:
 
 ## Contributing
 
-Want to add a new sector module or sharpen an existing one? See [CONTRIBUTING.md](CONTRIBUTING.md) for the structure, the tone standard, and the validation script.
+Want to add a new sector module, sharpen an existing one, or [share a screening example](examples/README.md)? See [CONTRIBUTING.md](CONTRIBUTING.md) for the structure, the tone standard, and the validation script.
 
 ---
 

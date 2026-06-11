@@ -19,4 +19,4 @@ jobs:
     - name: List sector modules
       run: |
         echo "Sector modules:"
-        ls cv-screener/references/ | grep -v -E '^(SCREENING_PROTOCOL|ATS_KEYWORDS)\.md$' | sed 's/^/  - /'
+        ls skills/cv-screener/references/ | grep -v -E '^(SCREENING_PROTOCOL|ATS_KEYWORDS)\.md$' | sed 's/^/  - /'

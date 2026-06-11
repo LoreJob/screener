@@ -1,0 +1,13 @@
+{
+  "name": "cv-screener",
+  "description": "Brutally honest, sector-specific CV screening against a job description. Binary ACCEPTED/REJECTED verdict, numeric scores, no coaching.",
+  "version": "1.0.0",
+  "author": {
+    "name": "LoreJob",
+    "url": "https://github.com/LoreJob"
+  },
+  "homepage": "https://github.com/LoreJob/screener",
+  "repository": "https://github.com/LoreJob/screener",
+  "license": "MIT",
+  "keywords": ["cv", "resume", "screening", "ats", "recruiting"]
+}

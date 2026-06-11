@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags: [ 'v*' ]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Validate before releasing
+      run: ./scripts/validate.sh
+
+    - name: Build skill zip
+      run: |
+        cd skills
+        zip -r ../cv-screener.zip cv-screener -x "*.DS_Store"
+
+    - name: Create GitHub release with zip
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        gh release create "$GITHUB_REF_NAME" cv-screener.zip \
+          --title "$GITHUB_REF_NAME" \
+          --generate-notes

@@ -10,8 +10,8 @@ failed=0
 fail() { echo "  ✗ $1"; failed=1; }
 pass() { echo "  ✓ $1"; }
 
-SKILL="cv-screener/SKILL.md"
-REFS="cv-screener/references"
+SKILL="skills/cv-screener/SKILL.md"
+REFS="skills/cv-screener/references"
 
 echo "Checking skill entry point ($SKILL)..."
 if [ ! -f "$SKILL" ]; then
@@ -45,7 +45,7 @@ echo
 echo "Checking sector modules..."
 # Every references/*.md mentioned in SKILL.md must exist
 for ref in $(grep -o 'references/[a-z-]*\.md' "$SKILL" | sort -u); do
-  [ -f "cv-screener/$ref" ] && pass "router reference resolves: $ref" || fail "router references missing file: $ref"
+  [ -f "skills/cv-screener/$ref" ] && pass "router reference resolves: $ref" || fail "router references missing file: $ref"
 done
 
 # Every sector module must be wired into the router and follow the template

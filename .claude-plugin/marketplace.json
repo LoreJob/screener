@@ -1,0 +1,14 @@
+{
+  "name": "screener",
+  "owner": {
+    "name": "LoreJob",
+    "url": "https://github.com/LoreJob"
+  },
+  "plugins": [
+    {
+      "name": "cv-screener",
+      "source": "./",
+      "description": "Brutally honest, sector-specific CV screening against a job description. Binary ACCEPTED/REJECTED verdict, numeric scores, no coaching."
+    }
+  ]
+}

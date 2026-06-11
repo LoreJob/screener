@@ -18,7 +18,7 @@ This guide explains how to contribute to the CV Screener skill — most commonly
 The whole skill is one self-contained folder:
 
 ```
-cv-screener/
+skills/cv-screener/
 ├── SKILL.md                       # Router: triggering, input validation, sector dispatch
 └── references/
     ├── SCREENING_PROTOCOL.md      # Shared evaluation framework (scoring, verdict, output format)
@@ -32,13 +32,21 @@ Sector modules are **reference files, not standalone skills**: they have no YAML
 
 ---
 
+## Sharing a Screening Example
+
+You don't need to write a module to contribute. If you ran your CV through the screener — especially if it got **ACCEPTED FOR INTERVIEW**, or if the verdict matched what the real company actually did — you can share the run in [examples/](examples/). Open an issue with the **"Share a screening example"** template, or submit a PR adding a file with the three-part structure (job description, CV, full output).
+
+**Anonymize everything first**: no names, no contacts, no identifying details. Replace specific employers with descriptions if needed ("top-3 Italian bank"). Examples containing personal data will not be merged.
+
+---
+
 ## Adding a New Sector Module
 
 ### Before you start
 
-Check the existing modules in `cv-screener/references/`. If a sector is already covered, consider whether your contribution adds a meaningfully different vertical (e.g., a "construction" module is distinct from "manufacturing") or whether it belongs as an extension of an existing module.
+Check the existing modules in `skills/cv-screener/references/`. If a sector is already covered, consider whether your contribution adds a meaningfully different vertical (e.g., a "construction" module is distinct from "manufacturing") or whether it belongs as an extension of an existing module.
 
-### 1. Create `cv-screener/references/<sector-name>.md`
+### 1. Create `skills/cv-screener/references/<sector-name>.md`
 
 Use a lowercase, hyphenated file name: `tech-software.md`, `pharma-biotech.md`, `retail-fmcg.md`.
 
@@ -79,7 +87,7 @@ Signal label:  [Value 1 / Value 2 / Value 3]
 
 ### 2. Wire the module into the router
 
-In `cv-screener/SKILL.md`:
+In `skills/cv-screener/SKILL.md`:
 - Add a row to the **Sector Map** table (`references/<sector-name>.md` + classification triggers)
 - If the sector borders an existing one, add a rule to **Ambiguous Cases**
 
@@ -93,7 +101,7 @@ Add the module to the **Covered Sectors** table in `README.md`.
 
 This is the most important requirement and the one most contributors get wrong.
 
-The module must behave like a recruiter, not a coach. Read the Tone Standards section in `cv-screener/references/SCREENING_PROTOCOL.md` before writing anything.
+The module must behave like a recruiter, not a coach. Read the Tone Standards section in `skills/cv-screener/references/SCREENING_PROTOCOL.md` before writing anything.
 
 **Do not write:**
 > "Your background shows some relevant experience, but you may want to consider adding more quantification to your achievements."
@@ -119,11 +127,12 @@ It checks the skill frontmatter, that every module referenced by the router exis
 
 ## PR Checklist
 
-- [ ] New module is `cv-screener/references/<sector-name>.md` (lowercase, hyphenated)
+- [ ] New module is `skills/cv-screener/references/<sector-name>.md` (lowercase, hyphenated)
 - [ ] Module contains all required sections (persona, core protocol reference, keywords, pass/fail criteria, calibration, output additions)
 - [ ] Tone follows the standard (objective, direct, no coaching)
 - [ ] Hard disqualifiers are defensible and sector-specific
 - [ ] Score calibration weights sum to 100%
-- [ ] Router sector map in `cv-screener/SKILL.md` is updated
+- [ ] Router sector map in `skills/cv-screener/SKILL.md` is updated
 - [ ] `README.md` Covered Sectors table is updated
 - [ ] `./scripts/validate.sh` passes locally
+- [ ] No personal data anywhere in the diff
