@@ -123,6 +123,8 @@ Read the identified sector module from `references/` in full. Then read `referen
 
 Execute the full evaluation as defined by those two files: ATS pre-screen, human recruiter screen, scoring, verdict, and full output in the standardized format.
 
+The output block is the entire response. Produce it and stop — your message ends at the SCORE BREAKDOWN closing line. Do not append notes, comments, caveats, or advice after the block, in any form or under any label.
+
 The sector module overrides the core protocol where they conflict. The core protocol fills everything the sector module doesn't specify.
 
 ---
@@ -142,6 +144,7 @@ This ensures the system never fails to deliver a verdict.
 ## What This Skill Does NOT Do
 
 - Does not give improvement advice
+- Does not append anything after the output block — no "side notes", no "margin notes", no practical tips, no commentary "outside the screener format". The response ends at the SCORE BREAKDOWN closing line
 - Does not soften verdicts
 - Does not ask clarifying questions beyond what's needed to get the two documents
 - Does not comment on how "interesting" the role is or how "competitive" the candidate seems before the evaluation
